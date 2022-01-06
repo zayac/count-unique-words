@@ -36,3 +36,29 @@ Carrie.")` must return `([]string{"I", "have", "a", "cat", "My", "is", "grey",
 Implement `main()` function that reads an input string from the keyboard.
 
 Implement tests for the program. The tests must cover all representative inputs.
+
+## Examples
+
+### Example 1
+
+```
+Enter a string: Where there is a will, there is a way.
+Occurrences:
+Where: 1
+there: 2
+is: 2
+a: 2
+will: 1
+way: 1
+```
+
+### Example 2
+```
+Enter a string: Много снега - много хлеба, много воды - много травы.
+Occurrences:
+Много: 4
+снега: 1
+хлеба: 1
+воды: 1
+травы: 1
+```
