@@ -38,7 +38,7 @@ func find(word string, words []string) int {
 			return s
 		}
 	}
-	return -1
+	return -1 // hint by terminal
 }
 
 func wordOccurrences(s string) (ww []string, occurrences []uint) {
