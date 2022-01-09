@@ -8,13 +8,12 @@ import (
 func IsSep(r rune) bool { return unicode.IsSpace(r) || unicode.IsPunct(r) || unicode.IsSymbol(r) }
 
 func wordOccurrences(s string) (words []string, occurrences []uint) {
-	var w []string
 	var tmp []rune
 	wasSep := true
 	for _, r := range s {
 		if IsSep(r) {
 			if !wasSep {
-				w = append(w, string(tmp))
+				s = append(s, string(tmp))
 				// tmp = tmp[:0]
 				tmp = nil
 			}
@@ -25,7 +24,7 @@ func wordOccurrences(s string) (words []string, occurrences []uint) {
 		}
 	}
 	if len(tmp) > 0 {
-		w = append(w, string(tmp))
+		s = append(s, string(tmp))
 	}
 	//надо создать срез с отформатированными значениями
 	return
