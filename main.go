@@ -7,7 +7,10 @@ import (
 	"unicode"
 )
 
-func IsSep(r rune) bool { return unicode.IsSpace(r) || unicode.IsPunct(r) || unicode.IsSymbol(r) }
+func IsSep(r rune) bool {
+	return unicode.IsSpace(r) || unicode.IsPunct(r) || unicode.IsSymbol(r)
+}
+
 func words(s string) []string {
 	var w []string
 	var tmp []rune
