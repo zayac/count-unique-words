@@ -40,20 +40,18 @@ func find(word string, words []string) int {
 			return i
 		}
 	}
-	return 0
+	return -1
 }
 
 func wordOccurrences(s string) (words []string, occurrences []uint) {
 	w := Words(s)
 	for _, word := range w {
-		if len(words) == len(occurrences) { // specified in the task
-			count := find(word, words)
-			if count == 0 {
-				words = append(words, word)
-				occurrences = append(occurrences, 1)
-			} else {
-				occurrences[count]++
-			}
+		count := find(word, words)
+		if count == -1 {
+			words = append(words, word)
+			occurrences = append(occurrences, 1)
+		} else {
+			occurrences[count]++
 		}
 	}
 	return words, occurrences
